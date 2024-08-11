@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XKe-os-gjq">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TranslateForMe-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TranslateForMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uIA-sT-1XT">
+                                <rect key="frame" x="0.0" y="113" width="393" height="471"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="is8-Ts-yJN" userLabel="TopView">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="174"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmy-nH-cEl" userLabel="sourceLanguageLabel">
+                                                <rect key="frame" x="10" y="9.9999999999999982" width="373" height="23.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TAa-ef-JAN" userLabel="inputTextView">
+                                                <rect key="frame" x="10" y="43.333333333333343" width="373" height="100"/>
+                                                <color key="backgroundColor" red="0.93333333330000001" green="0.96862745100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="Qpn-EJ-155"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="TAa-ef-JAN" firstAttribute="leading" secondItem="is8-Ts-yJN" secondAttribute="leading" constant="10" id="3og-rv-pGJ"/>
+                                            <constraint firstItem="nmy-nH-cEl" firstAttribute="top" secondItem="is8-Ts-yJN" secondAttribute="top" constant="10" id="Ec6-ws-Sta"/>
+                                            <constraint firstItem="nmy-nH-cEl" firstAttribute="leading" secondItem="is8-Ts-yJN" secondAttribute="leading" constant="10" id="QsE-iD-wwm"/>
+                                            <constraint firstAttribute="trailing" secondItem="TAa-ef-JAN" secondAttribute="trailing" constant="10" id="aB4-8s-W8k"/>
+                                            <constraint firstAttribute="trailing" secondItem="nmy-nH-cEl" secondAttribute="trailing" constant="10" id="jkk-Sc-Adp"/>
+                                            <constraint firstItem="TAa-ef-JAN" firstAttribute="top" secondItem="nmy-nH-cEl" secondAttribute="bottom" constant="10" id="yBW-Rv-zcy"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0i-B6-PVt" userLabel="MiddleView">
+                                        <rect key="frame" x="0.0" y="194" width="393" height="83"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiR-sa-uSM" userLabel="translateButton">
+                                                <rect key="frame" x="138.33333333333334" y="20" width="116.66666666666666" height="43"/>
+                                                <color key="backgroundColor" red="0.93333333330000001" green="0.96862745100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Translate">
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="translateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EzR-nf-UtB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="oiR-sa-uSM" firstAttribute="top" secondItem="c0i-B6-PVt" secondAttribute="top" constant="20" id="5Lb-Qf-8Hi"/>
+                                            <constraint firstItem="oiR-sa-uSM" firstAttribute="centerY" secondItem="c0i-B6-PVt" secondAttribute="centerY" id="XAW-VO-OUc"/>
+                                            <constraint firstItem="oiR-sa-uSM" firstAttribute="centerX" secondItem="c0i-B6-PVt" secondAttribute="centerX" id="fGs-Fj-4kS"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eZ4-yt-Zyt" userLabel="BottomView">
+                                        <rect key="frame" x="0.0" y="297" width="393" height="174"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEQ-yp-Nld" userLabel="targetLanguageLabel">
+                                                <rect key="frame" x="10" y="9.9999999999999982" width="373" height="23.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RQP-oo-A76" userLabel="outputTextView">
+                                                <rect key="frame" x="10" y="43.333333333333314" width="373" height="100"/>
+                                                <color key="backgroundColor" red="0.93333333330000001" green="0.96862745100000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="wlY-bm-COZ"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="aEQ-yp-Nld" secondAttribute="trailing" constant="10" id="CRS-y2-pDg"/>
+                                            <constraint firstItem="RQP-oo-A76" firstAttribute="leading" secondItem="eZ4-yt-Zyt" secondAttribute="leading" constant="10" id="YuM-la-5cF"/>
+                                            <constraint firstItem="aEQ-yp-Nld" firstAttribute="top" secondItem="eZ4-yt-Zyt" secondAttribute="top" constant="10" id="chr-Hd-jw3"/>
+                                            <constraint firstItem="RQP-oo-A76" firstAttribute="top" secondItem="aEQ-yp-Nld" secondAttribute="bottom" constant="10" id="fhG-FG-AGB"/>
+                                            <constraint firstItem="aEQ-yp-Nld" firstAttribute="leading" secondItem="eZ4-yt-Zyt" secondAttribute="leading" constant="10" id="ijZ-QW-642"/>
+                                            <constraint firstAttribute="trailing" secondItem="RQP-oo-A76" secondAttribute="trailing" constant="10" id="oej-Kh-X5D"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="c0i-B6-PVt" firstAttribute="centerY" secondItem="uIA-sT-1XT" secondAttribute="centerY" id="RGo-K8-RJi"/>
+                                    <constraint firstItem="c0i-B6-PVt" firstAttribute="top" secondItem="uIA-sT-1XT" secondAttribute="top" constant="194" id="Riy-Gk-G7K"/>
+                                    <constraint firstItem="c0i-B6-PVt" firstAttribute="top" secondItem="is8-Ts-yJN" secondAttribute="bottom" constant="20" id="fcT-Lg-dLP"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.47843137254901957" green="0.69803921568627447" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uIA-sT-1XT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0O0-Ue-VZS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uIA-sT-1XT" secondAttribute="bottom" constant="234" id="3yz-AH-2JK"/>
+                            <constraint firstItem="uIA-sT-1XT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ctv-J2-KGr"/>
+                            <constraint firstItem="uIA-sT-1XT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="juT-qh-FdR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TranslateForMe" id="enB-gL-VZ6"/>
+                    <connections>
+                        <outlet property="inputTextView" destination="TAa-ef-JAN" id="iKm-Ej-ORa"/>
+                        <outlet property="outputTextView" destination="RQP-oo-A76" id="rF2-8i-gtI"/>
+                        <outlet property="sourceLanguageLabel" destination="nmy-nH-cEl" id="6Dc-gk-do6"/>
+                        <outlet property="targetLanguageLabel" destination="aEQ-yp-Nld" id="iBk-aF-X8K"/>
+                        <outlet property="translateButton" destination="oiR-sa-uSM" id="4ZX-gd-udr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.28244274809151" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MFm-j2-80X">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XKe-os-gjq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qRQ-Yj-w6E">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ykF-1M-EON"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gL-6h-xOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
