@@ -19,6 +19,15 @@ class ViewController: UIViewController, UITextViewDelegate {
         }
     }
 
+    private var apiKey: String? {
+        guard let path = Bundle.main.path(forResource: "Config", ofType: "plist"),
+              let config = NSDictionary(contentsOfFile: path),
+              let key = config["API_KEY"] as? String else {
+            return nil
+        }
+        return key
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
@@ -110,7 +119,11 @@ class ViewController: UIViewController, UITextViewDelegate {
     }
 
     func translateTextWithChatGPT(_ text: String) {
-        let apiKey = "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"
+        guard let apiKey = apiKey else {
+            updateOutputText("API key is missing.")
+            return
+        }
+
         let urlString = "https://api.openai.com/v1/chat/completions"
         guard let url = URL(string: urlString) else { return }
 

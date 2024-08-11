@@ -13,6 +13,7 @@
 		6F09C8662C5D175B00292D09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F09C8642C5D175B00292D09 /* Main.storyboard */; };
 		6F09C8682C5D175F00292D09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F09C8672C5D175F00292D09 /* Assets.xcassets */; };
 		6F09C86B2C5D175F00292D09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F09C8692C5D175F00292D09 /* LaunchScreen.storyboard */; };
+		6F8146A42C68F6EE001EE9D9 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F8146A32C68F6EE001EE9D9 /* Config.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6F09C8672C5D175F00292D09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F09C86A2C5D175F00292D09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F09C86C2C5D176000292D09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F8146A32C68F6EE001EE9D9 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				6F09C85E2C5D175B00292D09 /* AppDelegate.swift */,
 				6F09C8602C5D175B00292D09 /* SceneDelegate.swift */,
 				6F09C8622C5D175B00292D09 /* ViewController.swift */,
+				6F8146A32C68F6EE001EE9D9 /* Config.plist */,
 				6F09C8642C5D175B00292D09 /* Main.storyboard */,
 				6F09C8672C5D175F00292D09 /* Assets.xcassets */,
 				6F09C8692C5D175F00292D09 /* LaunchScreen.storyboard */,
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F8146A42C68F6EE001EE9D9 /* Config.plist in Resources */,
 				6F09C86B2C5D175F00292D09 /* LaunchScreen.storyboard in Resources */,
 				6F09C8682C5D175F00292D09 /* Assets.xcassets in Resources */,
 				6F09C8662C5D175B00292D09 /* Main.storyboard in Resources */,
